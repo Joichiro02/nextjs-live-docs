@@ -18,9 +18,7 @@ import { currentUser } from '@clerk/nextjs/server';
 import Image from 'next/image';
 import { updateDocument } from '@/lib/actions/room.actions';
 
-export default function CollaborativeRoom({ roomId, roomMetadata }: CollaborativeRoomProps) {
-  const currentUserType = 'editor';
-  
+export default function CollaborativeRoom({ roomId, roomMetadata, users, currentUserType }: CollaborativeRoomProps) {
   const [documentTitle, setDocumentTitle] = useState(roomMetadata.title);
   const [editing, setEditing] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -116,7 +114,7 @@ export default function CollaborativeRoom({ roomId, roomMetadata }: Collaborativ
               </SignedIn>
             </div>
           </Header>
-          <Editor />
+          <Editor roomId={roomId} currentUserType={currentUserType}/>
         </div>
       </ClientSideSuspense>
     </RoomProvider>
