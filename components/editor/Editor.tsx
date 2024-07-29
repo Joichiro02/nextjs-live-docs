@@ -15,6 +15,7 @@ import { DeleteModal } from '../DeleteModal';
 import Loader from '../Loader';
 import FloatingToolbar from './plugins/FloatingToolbar';
 import { useThreads } from '@liveblocks/react/suspense';
+import Comments from '../Comments';
 
 // Catch any errors that occur during Lexical updates and log them
 // or throw them as needed. If you don't throw them, Lexical will
@@ -64,11 +65,11 @@ export function Editor({ roomId, currentUserType }: { roomId: string, currentUse
           )}
 
           <LiveblocksPlugin>
-            <FloatingComposer className='w-[350px]'/>
+            <FloatingComposer className='w-[350px]' />
             <FloatingThreads threads={threads} />
+            <Comments />
           </LiveblocksPlugin>
         </div>
-
       </div>
     </LexicalComposer>
   );
