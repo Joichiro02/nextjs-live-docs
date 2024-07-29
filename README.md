@@ -13,9 +13,9 @@
 
   <h3 align="center">A Collaborative LiveDocs</h3>
 
-   <!-- <div align="center">
-     Build this project step by step with our detailed tutorial on <a href="https://www.youtube.com/@javascriptmastery/videos" target="_blank"><b>JavaScript Mastery</b></a> YouTube. Join the JSM family!
-    </div> -->
+   <div align="center">
+     Click the link to see the deployed application <a href="https://nextjs-live-docs.vercel.app"target="_blank"><b>Collaborative LiveDocs</b></a>
+   </div>
 </div>
 
 ## 📋 <a name="table">Table of Contents</a>
